@@ -52,7 +52,6 @@ with open('BSE_EPS2.txt', 'w') as f:
     csv.writer(f, delimiter=' ').writerows(EP2nodeValuesAsFloats)
 
 OTnodeList = root.findall("./varray[@name='opticaltransitions']/v")
-#    data.append(child)
     
 for child in OTnodeList:
     
