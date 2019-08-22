@@ -14,6 +14,7 @@ EP1nodeValuesAsFloats = []
 EP2nodeValuesAsFloats = []
 OTnodeValuesAsFloats = []
 
+# Parse vasprun.xml using ElementTree
 tree = etree.parse('vasprun.xml')
 root = tree.getroot()
 
