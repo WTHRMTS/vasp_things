@@ -48,7 +48,6 @@ if ispin == 1:
     # Get data nodes
     nodeList = tree.findall('./calculation/dos/partial/array/set/set/set[@comment="spin 1"]/r')
     
-    nodeValuesAsFloats = []
     eigs = []
     dos = []
     # Write data as floats to a list
@@ -83,7 +82,6 @@ if ispin == 2:
     # Get data nodes
     nodeList = tree.findall('./calculation/dos/partial/array/set/set/set[@comment="spin 1"]/r')
     
-    nodeValuesAsFloats = []
     eigs = []
     dos = []
     # Write data as floats to a list
@@ -116,7 +114,6 @@ if ispin == 2:
     # Get data nodes
     nodeList = tree.findall('./calculation/dos/partial/array/set/set/set[@comment="spin 2"]/r')
     
-    nodeValuesAsFloats = []
     eigs = []
     dos = []
     # Write data as floats to a list
