@@ -8,8 +8,6 @@ import xml.etree.ElementTree as etree
 import numpy as np
 import csv
 
-data=[]
-nedos = []
 params = []
 spin = []
 smear = []
@@ -40,7 +38,6 @@ if ispin == 1:
    
     nodeList = tree.findall('./calculation/dos/total/array/set/set[@comment="spin 1"]/r')
     
-    nodeValuesAsFloats = []
     eigs = []
     dos = []
     
@@ -100,7 +97,6 @@ elif ispin == 2:
      
     nodeList1 = tree.findall('./calculation/dos/total/array/set/set[@comment="spin 1"]/r')
     
-    nodeValuesAsFloats = []
     eigs = []
     dos = []
     
@@ -157,7 +153,6 @@ elif ispin == 2:
     #Now for the other spin
     nodeList2 = tree.findall('./calculation/dos/total/array/set/set[@comment="spin 2"]/r')
     
-    nodeValuesAsFloats = []
     eigs = []
     dos = []
     
@@ -200,6 +195,6 @@ elif ispin == 2:
         
         band_gap2 = Energy2[gap_index2[0]]
         
-        print "The spin 2 band gap is", band_gap, "eV"
+        print "The spin 2 band gap is", band_gap2, "eV"
     else:
         print "Smearing is not Tetrahedron, cannot compute spin 2 band gap"
