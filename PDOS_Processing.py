@@ -72,7 +72,7 @@ if ispin == 1:
     pdos = np.column_stack((energy,y_values))        
     # Loop to write each atoms projected dos to a separate text file, i.e. n(files) = n(atoms)
     for i in range(0,natoms):
-        dos_i = pdos[(0+i)*nd:(i+1)*nd,:]
+        dos_i = pdos[(i)*nd:(i+1)*nd,:]
         j=i+1
         with open('pdos_atom_%s.txt' % j, 'w') as f:
             csv.writer(f, delimiter=' ').writerows(dos_i)
@@ -106,7 +106,7 @@ if ispin == 2:
     pdos1 = np.column_stack((energy1,y_values1))
     # Loop to write each atoms projected dos to a separate text file, i.e. n(files) = n(atoms) for spin 1
     for i in range(0,natoms):
-        dos_i = pdos1[(0+i)*nd:(i+1)*nd,:]
+        dos_i = pdos1[(i)*nd:(i+1)*nd,:]
         j=i+1
         with open('pdos_atom_%s_spin_1.txt' % j, 'w') as f:
             csv.writer(f, delimiter=' ').writerows(dos_i)
@@ -138,7 +138,7 @@ if ispin == 2:
     pdos2 = np.column_stack((energy2,y_values2))        
     # Loop to write each atoms projected dos to a separate text file, i.e. n(files) = n(atoms) for spin 2
     for i in range(0,natoms):
-        dos_i = pdos2[(0+i)*nd:(i+1)*nd,:]
+        dos_i = pdos2[(i)*nd:(i+1)*nd,:]
         j=i+1
         with open('pdos_atom_%s_spin_2.txt' % j, 'w') as f:
             csv.writer(f, delimiter=' ').writerows(dos_i)
