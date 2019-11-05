@@ -1,9 +1,10 @@
-# Author Jamie Booth
-# This script takes the vasprun.xml file of a Time-Dependent DFT calculation as input.
-# It outputs three text files
-# 1. Real Part of the Dielectric Response as EP1.txt
-# 2. Imaginary Part of the Dielectric Response as EP2.txt
-# 3. Optical Transitions as Opt_Trans.txt
+""" Author Jamie Booth
+ This script takes the vasprun.xml file of a Time-Dependent DFT calculation as input.
+ It outputs three text files
+ 1. Real Part of the Dielectric Response as EP1.txt
+ 2. Imaginary Part of the Dielectric Response as EP2.txt
+ 3. Optical Transitions as Opt_Trans.txt
+ """
 
 
 import xml.etree.ElementTree as etree
