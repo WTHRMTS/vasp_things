@@ -1,18 +1,18 @@
-# Author Jamie Booth
-# Python script for reading in vasprun.xml and outputting bands from band structure calculation
-#  to a text file which can be plotted in your favourite program
-#  (matplotlib, matlab, gnuplot etc.).
-# The eigenvalues are adjusted by subtracting the fermi energy
-# During execution the program will print the number of bands to screen.
-# To plot obviously you need to plot this many bands vs the x values this program creates,
-# so you may need this value to loop over when plotting, depending on how you do it.
-# Use a bash script to load a python module and call this program.
-# for example:
-# module load python/2.7.11
-# python /home/your_home_directory_Where_you_saved_this_file/Bands.py
-# The plotable output is "bands.txt", 
-# the first column is a vector with values between 1 and 100 used as a dummy x value for plotting against.
-# The other columns are the bands at each kpoint, if ISPIN = 2 the there are two output files "spin_1_bands.txt" and "spin_2_bands.txt"
+""" Author Jamie Booth input from Carl Belle
+ Python script for reading in vasprun.xml and outputting bands from band structure calculation
+  to a text file which can be plotted in your favourite program
+  (matplotlib, matlab, gnuplot etc.).
+ The eigenvalues are adjusted by subtracting the fermi energy
+ During execution the program will print the number of bands to screen.
+ To plot obviously you need to plot this many bands vs the x values this program creates,
+ so you may need this value to loop over when plotting, depending on how you do it.
+ Use a bash script to load a python module and call this program.
+ for example:
+ module load python/2.7.11
+ python /home/your_home_directory_Where_you_saved_this_file/Bands.py
+ The plotable output is "bands.txt", 
+ the first column is a vector with values between 1 and 100 used as a dummy x value for plotting against.
+ The other columns are the bands at each kpoint, if ISPIN = 2 the there are two output files "spin_1_bands.txt" and "spin_2_bands.txt" """
 
 import xml.etree.ElementTree as etree
 import numpy as np
