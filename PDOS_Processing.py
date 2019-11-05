@@ -1,8 +1,8 @@
-# Author Jamie Booth
-# This program takes a vasprun.xml file as input and outputs the projected density of states
-# for each atom and spin into a separate text file. 
-# The energies are the first column, which are shifted by the fermi level (i.e. Efermi = 0 eV)
-# Obviously this only works if you have set LORBIT appropriately in your INCAR.
+""" Author Jamie Booth
+ This program takes a vasprun.xml file as input and outputs the projected density of states
+ for each atom and spin into a separate text file. 
+ The energies are the first column, which are shifted by the fermi level (i.e. Efermi = 0 eV)
+ Obviously this only works if you have set LORBIT appropriately in your INCAR."""
 
 import xml.etree.ElementTree as etree
 import numpy as np
