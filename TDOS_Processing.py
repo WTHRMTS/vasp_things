@@ -1,9 +1,9 @@
-# Author Jamie Booth
-# This code processes the vasprun.xml file to extract the total density of states
-# It outputs one file if the calculation is not spin-resolved, and two files if it is.
-# They will be "tdos_shifted.txt", or "spin_1_tdos_shifted.txt" and "spin_2_tdos_shifted.txt"
-# The energies are shifted with respect to the fermi level, and are in the first column, while the ensity of states is the second column
-
+""" Author Jamie Booth, input from Carl Belle
+ This code processes the vasprun.xml file to extract the total density of states
+ It outputs one file if the calculation is not spin-resolved, and two files if it is.
+ They will be "tdos_shifted.txt", or "spin_1_tdos_shifted.txt" and "spin_2_tdos_shifted.txt"
+ The energies are shifted with respect to the fermi level, and are in the first column, while the density of states is the second column
+"""
 import xml.etree.ElementTree as etree
 import numpy as np
 import csv
